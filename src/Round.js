@@ -27,7 +27,7 @@ class Round {
         this.currentCard = this.deck.cards[this.numOfTurns];
     }
 
-    calculatePercentCorrect() {;
+    calculatePercentCorrect() {
         let percentage = (this.correctGuesses / this.numOfTurns) * 100;
         return Math.round(percentage);
     }
