@@ -10,14 +10,8 @@ This FlashCards project is a game that can be played in your terminal.  Each car
 - JavaScript
 
 ## Install/Setup Instructions
-- Clone down the repo by running the following command: 
-```bash
-git clone git@github.com:madhaus4/flashcards-starter.git
-```
+- Clone down the repo by running the following command: `git clone git@github.com:madhaus4/flashcards-starter.git`
 
-- After cloning, change into the directory and run:  
-```bash
-npm install
-```
+- After cloning, change into the directory and run `npm install`
 
 - Once the install is complete, you are ready to play.  Run `node index.js` in your command line and the game will be promted to start.
