@@ -22,9 +22,9 @@ class Round {
             this.correctGuesses += 1;
         }
 
-        turn.giveFeedback(guess);
         this.numOfTurns += 1;
         this.currentCard = this.deck.cards[this.numOfTurns];
+        return turn.giveFeedback(guess);
     }
 
     calculatePercentCorrect() {
