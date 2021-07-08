@@ -26,8 +26,7 @@ describe('Game', () => {
         expect(game.currentRound).to.deep.equal({});
     });
 
-    it('should instanciate cards when  game starts', () => {
-        game.start();
+    it('should have a way to start game', () => {
         expect(game.start).to.be.a('function');
     });
 });
