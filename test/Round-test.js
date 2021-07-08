@@ -65,7 +65,7 @@ describe('Round', () => {
     it('should be able to store an incorrect guess', () => {
         round.takeTurn('guess');
         expect(round.incorrectGuesses.length).to.equal(1);
-    })
+    });
 
     it('should calculate and return the percentage of correct guesses', () => {
         round.takeTurn('find()');
@@ -81,5 +81,5 @@ describe('Round', () => {
         round.takeTurn('Object.keys()');
 
         expect(round.endRound()).to.equal(`** Round over! ** You answered 67% of the questions correctly!`);
-    })
+    });
 });

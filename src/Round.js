@@ -17,13 +17,13 @@ class Round {
         const turn = new Turn(guess, this.currentCard);
 
         if (!turn.evaluateGuess(guess)) {
-            this.incorrectGuesses.push(this.currentCard.id)
+            this.incorrectGuesses.push(this.currentCard.id);
         } else {
             this.correctGuesses += 1;
         }
-
         this.numOfTurns += 1;
         this.currentCard = this.deck.cards[this.numOfTurns];
+
         return turn.giveFeedback(guess);
     }
 
@@ -33,7 +33,9 @@ class Round {
     }
 
     endRound() {
-        return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+        const message = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+        console.log(message);
+        return message;
     }
 }
 

@@ -1,16 +1,15 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-// const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 const Game = require('../src/Game');
 
 describe('Game', () => {
-    let cards, deck, round, game;
+    let card1, card2, card3, deck, round, game;
 
     beforeEach(() => {
-        deck = new Deck([cards]);
+        deck = new Deck([card1, card2, card3]);
         round = new Round(deck);
         game = new Game();
     });
@@ -28,7 +27,7 @@ describe('Game', () => {
     });
 
     it('should instanciate cards when  game starts', () => {
-        game.start(round);
+        game.start();
         expect(game.start).to.be.a('function');
     });
 });

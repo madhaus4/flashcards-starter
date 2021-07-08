@@ -10,18 +10,19 @@ class Game {
         this.currentRound = {};
     }
 
-    start(round) {
+    start() {
         const newCards = prototypeQuestions.map(card => new Card(
             card.id,
             card.question,
             card.answers,
             card.correctAnswer
         ));
+
         const deck = new Deck(newCards);
         this.currentRound = new Round(deck);
 
-        this.printMessage(deck, round);
-        this.printQuestion(round);
+        this.printMessage(deck, this.currentRound);
+        this.printQuestion(this.currentRound);
     }
 
     printMessage(deck, round) {
